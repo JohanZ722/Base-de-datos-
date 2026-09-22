@@ -1,0 +1,27 @@
+package javaapplication1;
+
+import java.util.LinkedList;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        LinkedList<String> materias = new LinkedList<>();
+        
+        materias.add ("Calculo");
+        materias.add ("Programacion");
+        materias.add ("Ingles");   
+        materias.add ("Fisica");   
+        
+        materias.forEach(System.out::println);
+        //ARREGLAR ALGORITMOS AL INICIO DE LA LISTA//
+        materias.addFirst("Algoritmos");
+        
+        System.out.println("\n Se agrego Algoritmos al inicio de la lista");
+        materias.forEach(System.out::println);
+        
+        materias.addLast("inteligencia artificial");
+        materias.forEach(System.out::println);
+     
+    }
+}
