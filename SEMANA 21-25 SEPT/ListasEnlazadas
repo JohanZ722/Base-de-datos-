@@ -8,10 +8,11 @@ public class Main {
 
         LinkedList<String> materias = new LinkedList<>();
         
-        materias.add ("Calculo");
         materias.add ("Programacion");
+        materias.add ("Matematicas");
         materias.add ("Ingles");   
-        materias.add ("Fisica");   
+        materias.add ("Bases de datos");   
+        materias.add ("Redes");
         
         materias.forEach(System.out::println);
         //ARREGLAR ALGORITMOS AL INICIO DE LA LISTA//
@@ -22,6 +23,33 @@ public class Main {
         
         materias.addLast("inteligencia artificial");
         materias.forEach(System.out::println);
-     
+        
+        //AGREGAR ESTRUCTURA DE DATOS EN LA POSICION 2//
+        materias.add(2, "estructura de datos");
+        System.out.println("\n"+materias);
+        
+        //CONSULTAR INFORMACION//
+        System.out.println("\n LA MATERIA QUE ESTA EN LA POSICION 3 ES:" +materias.get(3));
+        
+        //CONSULTEAR PRIMER Y ULTIMO ELEMENTO DE LA LISTA//
+        System.out.println("El primer elemento de la materia es " +materias.getFirst());
+        System.out.println("El ultimo elemnto de la materia es: " +materias.getLast() );
+        
+        if (materias.contains("ingles")){
+            System.out.println("La lista contiene la materia ingles");
+        }else{
+            System.out.println("La lista no contiene la materia ingles");
+        }
+        int posicion = materias.indexOf("Bases de datos");
+        if (posicion != -1){
+            System.out.println("La posicion de la Base de datos es " + posicion);
+        }
+        else {
+            System.out.println("Ese elemento no se encuentra en la lista materias ");
+        }
+        
+        System.out.println(materias);
+        System.out.println(materias.set(materias.indexOf("Matematicas"), "Matematicas aplicadas"));
+        System.out.println(materias); 
     }
 }
