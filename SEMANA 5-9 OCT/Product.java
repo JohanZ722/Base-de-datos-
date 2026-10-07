@@ -4,18 +4,20 @@ public class Product {
     private String name;
     private int existence;
     private double price;
+    private String category; // Nuevo atributo
 
     // Constructor para buscar por ID
     public Product(int ID) {
         this.ID = ID;
     }
 
-    // Constructor para crear un producto completo
-    public Product(int ID, String name, int existence, double price) {
+    // Constructor para crear un producto completo con categoría
+    public Product(int ID, String name, int existence, double price, String category) {
         this.ID = ID;
         this.name = name;
         this.existence = existence;
         this.price = price;
+        this.category = category;
     }
 
     // GET: permiten consultar los datos
@@ -35,6 +37,10 @@ public class Product {
         return price;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
     // SET: permiten modificar los datos
     public void setID(int ID) {
         this.ID = ID;
@@ -50,6 +56,10 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     // Compara dos productos por su ID
@@ -80,6 +90,7 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", existence=" + existence +
                 ", price=" + price +
+                ", category='" + category + '\'' +
                 '}';
     }
 }
